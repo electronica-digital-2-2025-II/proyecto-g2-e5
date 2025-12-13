@@ -24,8 +24,7 @@ Indice:
 
 ## Informe
 
-
-* ### [*FPGA Design Software* - Vivado](/proyecto-g2-e5/Informe Final/Informe_Final_Digital_II.pdf)
+# [Informe Final - Proyecto VitalSense(proyecto-g2-e5/)
 <!-- Link que permita acceder al Informe, el cual debe estar subido a este repositorio -->
 
 ## Implementación
