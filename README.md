@@ -25,7 +25,7 @@ Indice:
 ## Informe
 
 
-
+* ### [*FPGA Design Software* - Vivado](/proyecto-g2-e5/Informe Final/Informe_Final_Digital_II.pdf)
 <!-- Link que permita acceder al Informe, el cual debe estar subido a este repositorio -->
 
 ## Implementación
