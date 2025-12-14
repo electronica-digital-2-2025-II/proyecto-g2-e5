@@ -28,12 +28,16 @@ Indice:
 <!-- Link que permita acceder al Informe, el cual debe estar subido a este repositorio -->
 
 ## Implementación
+
+### Video explicativo del funcionamiento del proyecto 
  https://youtu.be/zWyNAepTANg?si=OjQUQD8bflupDY8l
 <!-- Video explicativo del funcionamiento del proytecto -->
 
 
+### Codigo main del proyecto
 <!-- CREAR UN DIRECTORIO CON EL NOMBRE "src" DONDE INVLUYAN LAS FUENTE (.c Y .h) QUE CREARON PARA EL PROOYECTO-->
 ### [Codigo-main](src/main.c) 
 
+### Diagrama de Bloques del ps
 <!-- NO OLVIDAD SUBIR EL PDF GENERADOR EN DEL BLOCK DESIGN-->
 ### [BLOCK DESING](src/Diagrama_Bloques.pdf) 
