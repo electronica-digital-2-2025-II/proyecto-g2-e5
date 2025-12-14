@@ -22,6 +22,123 @@ Indice:
 
 <!-- Descripción general y lo mas completa posible del proyecto" -->
 
+
+**VitalSense** es un sistema de **monitoreo biomédico portátil y de bajo costo** desarrollado como proyecto final de la asignatura **Electrónica Digital II** en la **Universidad Nacional de Colombia – Sede Bogotá**. El proyecto integra electrónica digital, sistemas embebidos y una aplicación móvil para adquirir, procesar y visualizar en tiempo real variables fisiológicas básicas, utilizando una arquitectura basada en **SoC FPGA**.
+
+El objetivo principal de VitalSense es ofrecer una alternativa académica y tecnológica frente a los dispositivos *wearables* comerciales, cuyo alto costo limita su acceso, especialmente en contextos donde el monitoreo preventivo de la salud resulta crítico.
+
+---
+
+## 📌 Motivación
+
+En Colombia, las enfermedades cardiovasculares representan una de las principales causas de mortalidad. A pesar del crecimiento del mercado de dispositivos de monitoreo de salud, su penetración sigue siendo baja debido a factores económicos y de accesibilidad. VitalSense surge como una respuesta a esta problemática, proponiendo un **prototipo funcional, abierto y de bajo costo**, enfocado en el monitoreo preventivo y el autocuidado.
+
+---
+
+## 🎯 Objetivo del proyecto
+
+Desarrollar un módulo de monitoreo biomédico portátil que permita:
+
+* Medir **frecuencia cardíaca (BPM)** y **saturación de oxígeno (SpO₂)** mediante fotopletismografía.
+* Medir **temperatura corporal sin contacto** mediante sensores infrarrojos.
+* Procesar las señales en tiempo real usando una plataforma **FPGA + ARM**.
+* Transmitir los datos a un **PC** y a una **aplicación móvil vía Bluetooth**.
+* Generar **alertas locales** ante valores fisiológicos fuera de rangos seguros.
+
+---
+
+## 🧠 Descripción general del sistema
+
+VitalSense está compuesto por tres grandes capas:
+
+1. **Hardware embebido (FPGA + sensores)**
+2. **Software de procesamiento y control**
+3. **Aplicación móvil para visualización**
+
+La arquitectura fue diseñada para ser modular, escalable y orientada a la experimentación académica.
+
+---
+
+## 🧩 Arquitectura de hardware
+
+### 🔹 Plataforma de procesamiento
+
+* **Zybo Z7 (Zynq-7000 SoC)**
+
+  * **Processing System (PS – ARM)**: adquisición de datos, procesamiento digital de señales y control general.
+  * **Programmable Logic (PL – FPGA)**: control de periféricos, buzzer y UART dedicada para Bluetooth.
+
+### 🔹 Sensores biomédicos
+
+* **MAX30102**
+
+  * Medición de frecuencia cardíaca y SpO₂.
+  * Comunicación mediante **I2C**.
+* **MLX90614 (GY-906)**
+
+  * Medición de temperatura corporal sin contacto.
+  * Comunicación **I2C / SMBus**.
+
+### 🔹 Comunicación
+
+* **I2C**: adquisición de datos desde sensores.
+* **UART (PS)**: envío de información detallada a un PC (depuración y monitoreo).
+* **UART Lite (PL) + Bluetooth HC-05**: transmisión inalámbrica a la aplicación móvil.
+
+### 🔹 Actuadores
+
+* **Buzzer** controlado desde la FPGA, activado cuando el BPM supera un umbral de seguridad.
+
+---
+
+## 💻 Software embebido
+
+El software del sistema fue desarrollado en **C**, utilizando el **BSP de Xilinx**, e incluye:
+
+* Inicialización y configuración de sensores mediante escritura directa de registros I2C.
+* Implementación de drivers para **I2C** y **UART**.
+* Algoritmos de **procesamiento digital de señales (DSP)** para:
+
+  * Eliminación de componente DC.
+  * Detección de picos cardíacos.
+  * Cálculo de BPM y estimación de SpO₂.
+* Promediado móvil para reducir ruido y mejorar estabilidad.
+* Gestión de sesiones de medición y control por botones físicos.
+* Protocolos de transmisión diferenciados para PC y Bluetooth.
+
+---
+
+## 📱 Aplicación móvil
+
+La aplicación fue desarrollada en **MIT App Inventor** y permite:
+
+* Visualizar en tiempo real BPM, SpO₂ y temperatura corporal.
+* Confirmar el estado de la conexión Bluetooth.
+* Mostrar alertas visuales ante valores anómalos.
+* Facilitar el uso del sistema sin requerir conocimientos técnicos avanzados.
+
+---
+
+## 🚀 Estado del proyecto
+
+* ✅ Prototipo funcional completamente integrado.
+* ✅ Comunicación estable por I2C, UART y Bluetooth.
+* ✅ Procesamiento en tiempo real de señales biomédicas.
+* ⚠️ Proyecto **académico** (no es un dispositivo médico certificado).
+
+---
+
+## 🔮 Posibles mejoras
+
+* Almacenamiento histórico de datos en la aplicación.
+* Calibración automática y algoritmos de filtrado más avanzados.
+* Integración de nuevos sensores (presión arterial, actividad física, ECG).
+* Procesamiento avanzado en PC (Python / MATLAB).
+* Sistema de alertas basado en tendencias y no solo en umbrales.
+
+---
+
+
 ## Informe
 
 ### [Informe Final - Proyecto VitalSense](Informe/Informe_Final_Digital_II.pdf) 
