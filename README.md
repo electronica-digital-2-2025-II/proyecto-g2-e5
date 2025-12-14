@@ -28,7 +28,7 @@ Indice:
 <!-- Link que permita acceder al Informe, el cual debe estar subido a este repositorio -->
 
 ## Implementación
-
+Para facilitar el entendimiento del proyecto y mostrar su prueba de funcionamiento, visite el siguiente link: https://youtu.be/zWyNAepTANg?si=OjQUQD8bflupDY8l
 <!-- Video explicativo del funcionamiento del proytecto -->
 
 
