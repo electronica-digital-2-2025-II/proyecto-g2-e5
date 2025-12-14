@@ -24,7 +24,7 @@ Indice:
 
 ## Informe
 
-# [Informe Final - Proyecto VitalSense](Informe/Informe_Final_Digital_II.pdf) 
+### [Informe Final - Proyecto VitalSense](Informe/Informe_Final_Digital_II.pdf) 
 <!-- Link que permita acceder al Informe, el cual debe estar subido a este repositorio -->
 
 ## Implementación
@@ -33,5 +33,7 @@ Indice:
 
 
 <!-- CREAR UN DIRECTORIO CON EL NOMBRE "src" DONDE INVLUYAN LAS FUENTE (.c Y .h) QUE CREARON PARA EL PROOYECTO-->
+### [Codigo-main](src/main.c) 
 
 <!-- NO OLVIDAD SUBIR EL PDF GENERADOR EN DEL BLOCK DESIGN-->
+### [BLOCK DESING](src/Diagrama_Bloques.pdf) 
